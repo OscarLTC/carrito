@@ -1,37 +1,20 @@
 import './App.css';
-import { Header } from './layout/header';
-import { Main } from './layout/main';
-import { Footer } from './layout/footer';
-import { Product } from './product/product';
-import { useEffect, useState } from 'react';
+import { Home } from './home/home';
+import { Routes, Route, Outlet, Link } from "react-router-dom";
+import { Details } from './details/details';
+import { Cart } from './cart/cart';
+import { Layout } from './layout/layout';
 
 function App() {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-
-    fetch('https://fakestoreapi.com/products')
-      .then(res => res.json())
-      .then(json => setProducts(json));
-
-  }, []);
-
   return (
     <>
-      <Header />
-      <main>
-        <Main />
-        <div class="album py-5 bg-light">
-          <div class="container">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-              {
-                products.map(product => <Product data={product} />)
-              }
-            </div>
-          </div>
-        </div>
-      </main>
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="producto/:id" element={<Details />} />
+          <Route path="canasta" element={<Cart />} />
+        </Route>
+      </Routes >
     </>
   );
 }
