@@ -36,7 +36,7 @@ export function Details() {
                         </li>
                     </ul>
                     <div class="card-body">
-                        <a href="#" class="card-link">Añadir a la cesta</a>
+                        <a href="#" class="card-link">Añadir al carrito</a>
                         <a href="#" class="card-link">Agregar a favoritos</a>
                     </div>
                 </div>
