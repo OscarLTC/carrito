@@ -36,8 +36,8 @@ export function Details() {
                         </li>
                     </ul>
                     <div class="card-body">
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
+                        <a href="#" class="card-link">Añadir a la cesta</a>
+                        <a href="#" class="card-link">Agregar a favoritos</a>
                     </div>
                 </div>
             </div>
